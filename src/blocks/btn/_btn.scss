@@ -1,0 +1,44 @@
+.phone {
+  position: relative;
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  background: #cf1414;
+  border-radius: 50%;
+}
+.fas {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  font-size: 48px;
+}
+.shake {
+  animation-play-state: paused;
+}
+.shake:hover {
+  animation-play-state: running;
+}
+.karts{
+    position: relative;
+    margin-top: 50px;
+}
+.front, .back {
+    position: absolute;
+    top: 20;
+    left: 0;
+    width: 200px;
+    height: 291px;
+    backface-visibility: hidden;
+    transition: 0.5s;
+    position: absolute;
+}
+.backfaces .back{
+    transform:rotateY(180deg);
+}
+
+#flip:checked+.backfaces .front{
+    transform:rotateY(180deg);
+}
+#flip:checked+.backfaces .back{
+    transform:rotateY(360deg);
+}
